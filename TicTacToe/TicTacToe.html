@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Lets play some Tic Tac Toe!!!!</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/game.css">
+    </head>
+
+    <body id="body">
+        <h1>Tic Tac Toe Game!</h1>
+        <!--This container is needed to overlay our canvas over our table-->
+        <div class="center-container">
+            <!--note: canvas width and height must be within the element.-->
+            <canvas id="win-lines" width="608" height="608" style="position:absolute; top:0; left:0; z-index:10; pointer-events: none;"></canvas>
+            <table>
+                <tr>
+                    <td id="0" onclick="placeX0r0('0')"></td>
+                    <td id="1" onclick="placeX0r0('1')"></td>
+                    <td id="2" onclick="placeX0r0('2')"></td>
+                </tr>
+                <tr>
+                    <td id="3" onclick="placeX0r0('3')"></td>
+                    <td id="4" onclick="placeX0r0('4')"></td>
+                    <td id="5" onclick="placeX0r0('5')"></td>
+                </tr>
+                <tr>
+                    <td id="6" onclick="placeX0r0('6')"></td>
+                    <td id="7" onclick="placeX0r0('7')"></td>
+                    <td id="8" onclick="placeX0r0('8')"></td>
+                </tr>
+            </table>
+        </div>
+        <script src=".js/tictactoe.js"></script>
+    </body>
+</html>
