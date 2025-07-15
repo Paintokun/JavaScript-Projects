@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+<body>
+    <script>
+        $(document).ready(function () {
+            $("body").append(`
+                <div id='container'>
+                    <div id='inner'>
+                        <h1>Basic jQuery</h1>
+                        <p id='p1'>Paragraph 1</p>
+                        <p id='p2'>Paragraph 2</p>
+                        <p id='p3'>Paragraph 3</p>
+                    </div>
+                </div>
+            `);
+
+            $("#p2").css("color", "red");
+
+            $("#p3").click(function () {
+                $("h1").hide();
+            });
+
+            // double-click on Paragraph 1
+            $("#p1").on("dblclick", function () {
+                $(this).text("You double-clicked me!");
+            });
+
+            // fade out Paragraph 2
+            $("#p2").on("click", function () {
+                $(this).fadeOut("slow");
+            });
+        });
+    </script>
+</body>
+</html>
